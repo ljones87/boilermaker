@@ -1,18 +1,18 @@
-const express = require('express') 
-const app = express() 
-const volleyball = require('volleyball') 
-const path = require('path') 
-const bodyParser = require('body-parser') 
+const express = require('express')
+const app = express()
+const volleyball = require('volleyball')
+const path = require('path')
+const bodyParser = require('body-parser')
 
 // logging middleware for debugging
-app.use(volleyball) 
+app.use(volleyball)
 
 // parsing middleware to use req.body in routes
-app.use(bodyParser.json()) 
-app.use(bodyParser.urlencoded({extended: true})) 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
 
 // setting up static middleware
-app.use(express.static(path.join(__dirname, '../public'))) 
+app.use(express.static(path.join(__dirname, '../public')))
 
 // prefixing /api
 app.use('/api', require('./api'))
@@ -24,7 +24,13 @@ app.use((err, req, res, next) => {
 
 // just remember this sucker here.. flying solo
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html')) 
+    res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
+///// Here so we could work sorry :) 
 
+app.listen(3000, function () {
+  console.log("Knock, knock");
+  console.log("Who's there?");
+  console.log("Your server, listening on port 3000");
+});

@@ -1,12 +1,10 @@
-Hey, I am updating the README with some stuff.
+#Team BearPeople
 
-$ git branch -d test-file-lj
-Deleted branch test-file-lj (was fd66e6d).
+Deleted branch test-file-lj (was fd66e6d)
+- git branch -d test-file-lj
 
-LJ@MacBook-Pro boilermaker (master) $
-
-$ git checkout -b react-startup
 Switched to a new branch 'react-startup'
+- git checkout -b react-startup
 
-$ git pull origin 'branch name'
 Pull from branch
+- git pull origin 'branch name'
