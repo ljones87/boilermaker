@@ -8,3 +8,7 @@ Switched to a new branch 'react-startup'
 
 Pull from branch
 - git pull origin 'branch name'
+
+Don't forget to npm install!
+- npm install
+
