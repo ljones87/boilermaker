@@ -17,12 +17,12 @@ app.use(express.static(path.join(__dirname, '../public')))
 // prefixing /api
 app.use('/api', require('./api'))
 
-app.get(err, (req, res) => {
+app.use((err, req, res, next) => {
     err.status = err.status || 500
     res.send('fail whale')
 })
 
-// specify path here for index.html in public directory during review!
+// just remember this sucker here.. flying solo
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html')) 
 })
